@@ -1,9 +1,10 @@
 // src/app/payment-verification/page.tsx
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import styles from '../styles/payment-verification.module.css';
+
 export const dynamic = 'force-dynamic';
 
 interface TransactionData {
@@ -17,7 +18,7 @@ interface TransactionData {
 }
 
 /**
- * Payment Verification Component
+ * Payment Verification Content Component
  * 
  * Handles the post-payment verification process for Paystack transactions.
  * Verifies payment status and displays appropriate confirmation or error messages.
@@ -29,7 +30,7 @@ interface TransactionData {
  * - User-friendly success and error states
  * - Support for multiple payment channels (card, bank transfer, etc.)
  */
-export default function PaymentVerification() {
+function PaymentVerificationContent() {
   const searchParams = useSearchParams();
   const [verificationStatus, setVerificationStatus] = useState<'verifying' | 'success' | 'failed'>('verifying');
   const [transactionData, setTransactionData] = useState<TransactionData | null>(null);
@@ -186,5 +187,28 @@ export default function PaymentVerification() {
         </div>
       )}
     </div>
+  );
+}
+
+/**
+ * Main Payment Verification Component with Suspense Boundary
+ * 
+ * Wraps the verification content in Suspense to handle useSearchParams()
+ * which is a dynamic hook that needs to be suspended in Next.js
+ * 
+ * Provides fallback loading state while the search parameters are being resolved
+ */
+export default function PaymentVerification() {
+  return (
+    <Suspense fallback={
+      <div className={styles.container}>
+        <div className={styles.verifyingState}>
+          <div className={styles.verifyingIcon}>🔄</div>
+          <h2>Loading Payment Verification...</h2>
+        </div>
+      </div>
+    }>
+      <PaymentVerificationContent />
+    </Suspense>
   );
 }
