@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import styles from '../styles/payment-verification.module.css';
+export const dynamic = 'force-dynamic';
 
 interface TransactionData {
   amount: number;
