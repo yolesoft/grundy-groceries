@@ -1,6 +1,6 @@
 // src/app/order-tracking/page.tsx
 'use client';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import styles from '../styles/order-tracking.module.css';
 
@@ -23,19 +23,12 @@ interface Order {
 }
 
 /**
- * Order Tracking & Traceability Dashboard Component
+ * Order Tracking Content Component
  * 
- * Comprehensive real-time order monitoring system with automatic updates,
- * detailed traceability information, and vendor payout calculations.
- * 
- * Features:
- * - Real-time order monitoring with auto-refresh
- * - Advanced filtering by payment status
- * - Detailed order traceability and audit trails
- * - Vendor payout breakdown and calculations
- * - Payment method and status tracking
+ * This component contains the main logic and uses useSearchParams hook
+ * which requires Suspense boundary in Next.js
  */
-export default function OrderTracking() {
+function OrderTrackingContent() {
   const searchParams = useSearchParams();
   const [orders, setOrders] = useState<Order[]>([]);
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
@@ -177,7 +170,7 @@ export default function OrderTracking() {
             </div>
           )}
           <button
-            onClick={refreshOrders}
+            onClick={() => refreshOrders()} // Fixed: wrapped in arrow function
             className={styles.refreshButton}
           >
             <span>🔄 Refresh</span>
@@ -376,5 +369,24 @@ export default function OrderTracking() {
         </div>
       </div>
     </div>
+  );
+}
+
+/**
+ * Main Order Tracking Component with Suspense Boundary
+ * 
+ * Wraps the content component in Suspense to handle useSearchParams()
+ * which is a dynamic hook that needs to be suspended in Next.js
+ */
+export default function OrderTracking() {
+  return (
+    <Suspense fallback={
+      <div className={styles.container}>
+        <h1>Order Tracking & Traceability Dashboard</h1>
+        <p>Loading order tracking...</p>
+      </div>
+    }>
+      <OrderTrackingContent />
+    </Suspense>
   );
 }
