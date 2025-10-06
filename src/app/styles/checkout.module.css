@@ -1,0 +1,538 @@
+/* src/app/styles/checkout.module.css */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.emptyCart {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.emptyCart h2 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.emptyCart p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.orderConfirmed {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.orderConfirmed h1 {
+  color: #059669;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.instructionsPanel {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: #dbeafe;
+  border: 2px solid #3b82f6;
+  border-radius: 1rem;
+}
+
+.instructionsPanel h3 {
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  margin-bottom: 1rem;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.detailValue {
+  color: #1e293b;
+  font-size: 1.125rem;
+}
+
+.accountNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.vendorInfo {
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.vendorInfo h4 {
+  margin: 0 0 0.5rem 0;
+  color: #92400e;
+}
+
+.demoInstructions {
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.demoInstructions h4 {
+  margin: 0 0 0.5rem 0;
+  color: #92400e;
+}
+
+.demoInstructions ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.demoInstructions li {
+  margin-bottom: 0.25rem;
+}
+
+.terminalMockup {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border: 2px dashed #6c757d;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.terminalMockup h4 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+}
+
+.terminalScreen {
+  width: 300px;
+  height: 220px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: 'Courier New', monospace;
+}
+
+.terminalHeader {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.75rem;
+}
+
+.terminalBank {
+  font-size: 0.625rem;
+  color: #6c757d;
+}
+
+.terminalStore {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0.25rem 0;
+}
+
+.terminalAmount {
+  margin-bottom: 0.75rem;
+}
+
+.terminalAmountLabel {
+  font-size: 0.625rem;
+  color: #6c757d;
+}
+
+.terminalAmountValue {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.terminalReference {
+  margin-bottom: 0.75rem;
+}
+
+.terminalReferenceLabel {
+  font-size: 0.625rem;
+  color: #6c757d;
+}
+
+.terminalReferenceValue {
+  font-size: 0.5625rem;
+  font-family: 'Courier New', monospace;
+}
+
+.terminalStatus {
+  margin-bottom: 1rem;
+}
+
+.terminalStatusLabel {
+  font-size: 0.625rem;
+  color: #6c757d;
+}
+
+.terminalStatusValue {
+  font-size: 0.625rem;
+  color: #856404;
+}
+
+.tapButton {
+  padding: 0.75rem;
+  background: #059669;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.terminalFooter {
+  font-size: 0.5rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.processExplanation {
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #f59e0b;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.processExplanation h4 {
+  margin: 0 0 0.5rem 0;
+  color: #92400e;
+}
+
+.processExplanation ol {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.processExplanation li {
+  margin-bottom: 0.5rem;
+}
+
+.traceabilityFeatures {
+  padding: 1rem;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  border-radius: 0.5rem;
+}
+
+.traceabilityFeatures h5 {
+  margin: 0 0 0.5rem 0;
+  color: #0c5460;
+}
+
+.traceabilityFeatures ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 0.8125rem;
+  color: #0c5460;
+}
+
+.traceabilityFeatures li {
+  margin-bottom: 0.25rem;
+}
+
+.orderSummary {
+  margin-bottom: 2rem;
+}
+
+.orderSummary h2 {
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  background: white;
+}
+
+.orderItemInfo h4 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.orderItemPrice {
+  color: #64748b;
+  margin: 0.25rem 0;
+}
+
+.orderItemVendor {
+  color: #64748b;
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quantityButton {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 40px;
+  transition: all 0.2s;
+}
+
+.quantityMinus {
+  background: #dc2626;
+  color: white;
+}
+
+.quantityMinus:hover {
+  background: #b91c1c;
+}
+
+.quantityPlus {
+  background: #059669;
+  color: white;
+}
+
+.quantityPlus:hover:not(:disabled) {
+  background: #047857;
+}
+
+.quantityPlus:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.quantityDisplay {
+  font-weight: 600;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.removeButton {
+  padding: 0.5rem 0.75rem;
+  background: #f59e0b;
+  color: black;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  margin-left: 0.75rem;
+}
+
+.removeButton:hover {
+  background: #d97706;
+}
+
+.orderTotal {
+  border-top: 2px solid #3b82f6;
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.paymentForm {
+  margin-top: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+}
+
+.paymentMethods {
+  margin-bottom: 1.5rem;
+}
+
+.paymentMethods label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paymentOption:hover {
+  border-color: #3b82f6;
+  background: #f8fafc;
+}
+
+.paymentOption input[type="radio"] {
+  margin: 0;
+}
+
+.paymentOptionContent {
+  flex: 1;
+}
+
+.paymentOption strong {
+  color: #1e293b;
+}
+
+.paymentOption p {
+  margin: 0.25rem 0 0 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.continueShopping {
+  padding: 0.75rem 1.5rem;
+  background: #6b7280;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  text-align: center;
+  flex: 1;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.continueShopping:hover {
+  background: #4b5563;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  flex: 1;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.submitButton:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+  }
+  
+  .orderItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .quantityControls {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+  
+  .terminalScreen {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orderConfirmed h1 {
+    font-size: 2rem;
+  }
+  
+  .instructionsPanel {
+    padding: 1rem;
+  }
+  
+  .accountNumber {
+    font-size: 1.25rem;
+  }
+  
+  .amount {
+    font-size: 1.25rem;
+  }
+}

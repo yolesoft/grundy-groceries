@@ -1,0 +1,396 @@
+/* src/app/styles/order-tracking.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerContent h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.headerContent p {
+  margin: 0;
+  color: #64748b;
+}
+
+.lastUpdate {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0.5rem 0 0 0;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.newOrdersNotification {
+  padding: 0.5rem 0.75rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.refreshButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.refreshButton:hover {
+  background-color: #0056b3;
+}
+
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterButtonActive {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.filterButton:hover:not(.filterButtonActive) {
+  background-color: #e9ecef;
+}
+
+.dashboardLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ordersSection h2 {
+  margin-bottom: 1.25rem;
+  color: #1e293b;
+}
+
+.ordersList {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.emptyState {
+  border: 2px dashed #ddd;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  text-align: center;
+  color: #666;
+}
+
+.orderCard {
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.orderCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.orderCardSelected {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.orderReference {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.orderDetails {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.orderStatus {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statusPaid {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.statusPending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.statusFailed {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.vendorInfo {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.75rem;
+}
+
+.detailsSection {
+  flex: 1;
+}
+
+.detailsSection h2 {
+  margin-bottom: 1.25rem;
+  color: #1e293b;
+}
+
+.detailsCard {
+  border: 1px solid #007bff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.detailsCard h3 {
+  color: #007bff;
+  margin-bottom: 1.25rem;
+}
+
+.paymentInfo {
+  margin-bottom: 1.5rem;
+}
+
+.paymentInfo h4 {
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.paymentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.paymentItem {
+  margin-bottom: 0.5rem;
+}
+
+.paymentLabel {
+  font-weight: 600;
+  color: #374151;
+}
+
+.paymentValue {
+  color: #1e293b;
+}
+
+.itemsSection {
+  margin-bottom: 1.5rem;
+}
+
+.itemsSection h4 {
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.itemsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.itemsTable th {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.itemsTable td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.itemsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.itemsTable tr:hover {
+  background-color: #f8fafc;
+}
+
+.vendorPayouts {
+  margin-bottom: 1.5rem;
+}
+
+.vendorPayouts h4 {
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.payoutsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.payoutsTable th {
+  background-color: #f8f9fa;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.payoutsTable td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.payoutsTable tr:last-child td {
+  border-bottom: none;
+}
+
+.payoutsTable tr:hover {
+  background-color: #f8fafc;
+}
+
+.traceabilityProof {
+  background: #e7f3ff;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid #007bff;
+}
+
+.traceabilityProof h4 {
+  color: #007bff;
+  margin: 0 0 0.75rem 0;
+}
+
+.traceabilityProof ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.traceabilityProof li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .headerActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dashboardLayout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .paymentGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .itemsTable, .payoutsTable {
+    font-size: 0.875rem;
+  }
+  
+  .itemsTable th, .itemsTable td,
+  .payoutsTable th, .payoutsTable td {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .filterButton {
+    text-align: center;
+  }
+  
+  .orderHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .orderStatus {
+    align-self: flex-start;
+  }
+}

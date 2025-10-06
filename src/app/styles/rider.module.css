@@ -1,0 +1,400 @@
+/* src/app/styles/rider.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.headerContent h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.headerContent p {
+  margin: 0;
+  color: #64748b;
+}
+
+.headerActions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.riderInfo {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.terminalSelect {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ddd;
+}
+
+.refreshButton {
+  padding: 0.5rem 0.75rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 0.75rem 1.25rem;
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tabActive {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.tab:hover:not(.tabActive) {
+  background-color: #e9ecef;
+}
+
+.dashboardLayout {
+  display: flex;
+  gap: 2rem;
+}
+
+.ordersList {
+  flex: 1;
+}
+
+.ordersList h2 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.emptyState {
+  border: 2px dashed #ddd;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  text-align: center;
+  color: #666;
+}
+
+.orderCard {
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.orderCard:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.orderCardSelected {
+  background-color: #f8f9fa;
+  border-color: #007bff;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.orderInfo {
+  flex: 1;
+}
+
+.orderCustomer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.orderCustomer h4 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.orderDetails {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.orderAmount {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #059669;
+  margin: 0.5rem 0;
+}
+
+.orderStatus {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.statusBadge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  font-weight: 600;
+}
+
+.statusPending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.statusPaid {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.statusDelivered {
+  background-color: #28a745;
+  color: white;
+}
+
+.statusFailed {
+  background-color: #dc3545;
+  color: white;
+}
+
+.paymentMethod {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.orderActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background-color 0.2s;
+}
+
+.acceptButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.acceptButton:hover {
+  background-color: #0056b3;
+}
+
+.collectButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.collectButton:hover {
+  background-color: #1e7e34;
+}
+
+.completeButton {
+  background-color: #20c997;
+  color: white;
+}
+
+.completeButton:hover {
+  background-color: #199d76;
+}
+
+.detailsButton {
+  background-color: #6c757d;
+  color: white;
+}
+
+.detailsButton:hover {
+  background-color: #545b62;
+}
+
+.orderMeta {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.orderMeta div {
+  margin-bottom: 0.25rem;
+}
+
+.orderDetailsPanel {
+  flex: 1;
+}
+
+.orderDetailsPanel h2 {
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.detailsCard {
+  border: 1px solid #007bff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.detailsCard h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.detailsSection {
+  margin-bottom: 1rem;
+}
+
+.detailsSection h4 {
+  margin: 0 0 0.75rem 0;
+  color: #1e293b;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.detailItem {
+  margin-bottom: 0.75rem;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #374151;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.detailValue {
+  color: #1e293b;
+}
+
+.vendorSplit {
+  padding: 0.75rem;
+  background-color: #e7f3ff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.vendorSplit strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+.vendorSplitDetails {
+  font-size: 0.75rem;
+}
+
+.vendorSplitRow {
+  margin-bottom: 0.25rem;
+}
+
+.itemsList {
+  margin: 0.75rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.itemsList li {
+  margin-bottom: 0.5rem;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.timestamp div {
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .headerActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .dashboardLayout {
+    flex-direction: column;
+  }
+  
+  .orderHeader {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .orderActions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .actionButton {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .tab {
+    text-align: center;
+  }
+}
